@@ -31,7 +31,7 @@ export class TodoService {
   async updateTaskById(
     userId: number,
     taskId: number,
-    dto: CreateTaskDto,
+    dto: UpdateTaskDto,
   ): Promise<Task> {
     const task = await this.prisma.task.findUnique({
       where: { id: taskId },
