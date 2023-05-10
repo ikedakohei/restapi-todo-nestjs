@@ -18,7 +18,7 @@ async function bootstrap() {
       cookie: {
         httpOnly: true,
         sameSite: 'none',
-        secure: process.env.NODE_ENV === 'production',
+        secure: true,
       },
       value: (req: Request) => {
         return req.header('csrf-token');
